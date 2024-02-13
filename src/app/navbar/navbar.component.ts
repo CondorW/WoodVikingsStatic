@@ -12,4 +12,13 @@ export class NavbarComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+  // Function to handle smooth scrolling to a section
+  scrollToSection(sectionId: string): void {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Function to scroll down one viewport height
+  scrollToNextScreen(): void {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  }
 }

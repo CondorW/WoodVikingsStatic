@@ -12,5 +12,15 @@ import { FooterComponent } from './footer/footer.component'; // Ensure the path 
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'WoodVikingsStatic';
+  title = 'Wood Vikings';
+  // Function to handle smooth scrolling to a section
+  scrollToSection(sectionId: string): void {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Function to scroll down one viewport height
+  scrollToNextScreen(): void {
+    console.log('Scrolling to next screen');
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  }
 }
